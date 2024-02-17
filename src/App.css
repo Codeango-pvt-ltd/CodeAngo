@@ -1,0 +1,483 @@
+
+.navbar {
+  display: flex;
+  color: white;
+  height: 86px;
+  width: 1440px;
+}
+
+.logo img {
+  width: 90px;
+  height: 86px;
+  margin: -9px 100px;
+}
+
+.search input {
+  /* Rectangle 2 */
+
+  position: absolute;
+  width: 641px;
+  height: 35px;
+  left: 240px;
+  top: 27px;
+  border: #F38528;
+  background: #E0E0E0;
+  border-radius: 4px;
+
+
+}
+
+.search input[type=text] {
+  font-size: 16px;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 300;
+  line-height: 19px;
+  padding-left: 30px;
+}
+
+.search img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 832px;
+  top: 28.3px;
+  filter: brightness(89%);
+
+}
+
+/* Vector 2 */
+.hr {
+  position: absolute;
+  width: 0px;
+  height: 32.5px;
+right: 235px;
+  top: 23px;
+
+  border: 1px solid #000000;
+
+}
+
+.login {
+  /* Log in */
+
+  position: absolute;
+  width: 36px;
+  height: 14px;
+  right: 145px;
+  top: 40px;
+  cursor: pointer;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.loginhr {
+  /* Vector 1 */
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 35px;
+  height: 0px;
+  right: 145px;
+  top: 48px;
+  
+  background: #D9D9D9;
+  border: 1px solid #000000;
+
+
+}
+
+.signup button {
+  /* Rectangle 3 */
+
+  position: absolute;
+  width: 90px;
+  height: 27px;
+  right: 0px;
+  top: 35px;
+  cursor: pointer;
+  /* Blue */
+  background: #007AFF;
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
+
+.navbarhr {
+  position: absolute;
+  width: 1550.5px;
+  top: 87px;
+  height: 0px;
+  left: 0px;
+  border: 1px solid #F38528;
+}
+
+/* Ellipse 34 */
+.bubblesbluebig {
+  border-radius: 50%;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 848px;
+  top: -17px;
+  background: #007AFF;
+}
+
+.bubblesorangebig {
+  border-radius: 50%;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 1000px;
+  background: #F38528;
+  top: 30px;
+}
+
+.bubblebluesmall {
+  border-radius: 50%;
+  position: absolute;
+  background: #007AFF;
+  width: 27px;
+  height: 27px;
+  top: 0px;
+  left: 165px;
+}
+
+.bubblebluesmall2 {
+  border-radius: 50%;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background: #007AFF;
+  left: 474px;
+  top: 57px;
+}
+.bubbleorangesmall {
+  border-radius: 50%;
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background: #F38528;
+  left: 693px;
+  top: 0px;
+}
+
+.signup button:hover{
+  background-color: black;
+  transition-duration: 1s ;
+}
+
+.footer{
+  position: absolute;
+  width: 1307px;
+  height: 479px;
+  top: 4119px;
+  left: 51px;  
+}
+
+.contactsection{
+  /* CONTACT */
+
+position: absolute;
+width: 113px;
+height: 28px;
+left: 40px;
+top: 4173px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+}
+
+.mail img{
+  /* download 1 */
+
+position: absolute;
+width: 38px;
+    left: 54px;
+    top: 4236px;
+
+}
+
+.mail a{
+  /* support@codeango.com */
+
+position: absolute;
+width: 182px;
+height: 19px;
+left: 107px;
+top: 4243px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+text-align: center;
+text-decoration-line: underline;
+
+color: #000000;
+
+}
+.call img{
+  position: absolute;
+ width: 40px;
+
+ left: 54px;
+ top: 4293px;
+ filter: brightness(110%);
+
+}
+.call a {
+  /* Tel: +9172764 06725 */
+
+ position: absolute;
+ width: 145px;
+ height: 19px;
+ left: 102px;
+ top: 4297px;
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 19px;
+ /* identical to box height */
+ text-align: center;
+ text-decoration-line: underline;
+
+ color: #000000;
+
+}
+.location a{
+  position: absolute;
+   width: 154px;
+   height: 39px;
+   left: 120px;
+   top: 4353px;
+  
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+  
+   color: #000000  ;
+}
+
+.location img{
+  position: absolute;
+ width: 40px;
+ height: 37.65px;
+ left: 54px;
+ top: 4356px;
+}
+.facebook img{
+  position: absolute;
+ width: 45px;
+ height: 42.35px;
+ left: 54px;
+ top: 4465px;
+}
+.youtube img {
+  position: absolute;
+ width: 45px;
+ height: 42.35px;
+ left: 119px;
+ top: 4465px;
+
+}
+.instagram img{
+  position: absolute;
+ width: 45px;
+ height: 43.53px;
+ left: 184px;
+ top: 4467px;
+}
+.linkedin img{
+   position: absolute;
+ width: 45px;
+ height: 42.35px;
+ left: 249px;
+ top: 4467px;
+}
+
+.twitter img{
+   position: absolute;
+   width: 45px;
+ height: 42.35px;
+ left: 314px;
+ top: 4469px;
+}
+.hr1{
+   position: absolute;
+ width: 0px;
+ height: 370px;
+ left: 494px;
+ top: 4164px;
+
+ border: 1.5px solid #F38528;
+}
+.safepayment{
+   position: absolute;
+ width: 370px;
+ height: 130px;
+ left: 523px;
+ top: 4171px;
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 28px;
+
+ color: #000000;
+
+}
+.safepayment img{
+
+ position: absolute;
+ width: 386px;
+ height: 82px;
+ top:85px;
+ left: -20px;
+}
+.securedby{
+   position: absolute;
+ width: 180px;
+ height: 28px;
+ left: 528px;
+ top: 4389px;
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 28px;
+
+ color: #000000;
+}
+.securedby img{ 
+
+ position: absolute;
+ width: 322px;
+ height: 83px;
+ top: 66px;
+ left: -17px;
+}
+.hr2{
+   position: absolute;
+ width: 0px;
+ height: 370px;
+ left: 934px;
+ top: 4164px;
+
+ border: 1.5px solid #F38528;
+}
+.knowus{
+ position: absolute;
+ width: 115px;
+ height: 28px;
+ left: 963px;
+ top: 4171px;
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 28px;
+
+ color: #000000;
+}
+.leftknows{
+ position: absolute;
+ width: 233.98px;
+ height: 267px;
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 19px;
+
+ color: #000000;
+
+
+}
+.quicklinks{
+ position: absolute;
+ width: 150px;
+ height: 28px;
+ left: 1217px;
+ top: 4171px;
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 700;
+ font-size: 24px;
+ line-height: 28px;
+
+ color: #000000;
+
+}
+.rightlinks{
+ position: absolute;
+ width: 79px;
+ height: 153px;
+
+
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 400;
+ font-size: 16px;
+ line-height: 19px;
+ text-decoration-line: underline;
+
+ color: #000000;
+
+}
+.footerbottom{
+  position: absolute;
+  width: 1350px;
+  height: 0px;
+  left: 95px;
+  top: 8675px;
+  border: 1.5px solid #F38528;
+}
+
+.copyright{
+ position: absolute;
+ width: 431px;
+ height: 23px;
+ left: 578px;
+ top: 8700px;
+
+ font-family: 'Raleway';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 20px;
+ line-height: 23px;
+
+ color: #000000;
+
+}
+
+.features{
+  position: absolute;
+width: 1002px;
+height: 709px;
+left: 260px;
+top: 1808px;
+}
+

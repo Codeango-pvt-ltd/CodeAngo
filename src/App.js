@@ -1,9 +1,14 @@
+import './App.css';
+import Features from './Components/Features';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
 
 function App() {
-  return (
-    <div className="App flex w-full border border-red-400">
-        Hello 
-    </div>
+  return (<>
+   <Navbar/>
+   <Features/>
+   <Footer/>
+   </>
   );
 }
 
