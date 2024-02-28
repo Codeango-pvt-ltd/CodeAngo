@@ -1,25 +1,113 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+
+
+import React, { useState } from 'react';
+import './App.css';
+import TopRatedCourses from './TopRatedCourses';
+import NewAddedCourses from './NewAddedCourses';
+import HighRatedCourses from './HighRatedCourses';
+
+const App = () => {
+  const courseData = [
+    {
+      category: 'Programming',
+      courses: [
+        { id: 1, title: 'Introduction to React', image: 'logo.svg', rating: 4.5, dateAdded: '2023-01-01' },
+        { id: 2, title: 'Advanced JavaScript', image: 'advanced_js.jpg', rating: 4.8, dateAdded: '2023-02-15' },
+      ],
+    },
+    {
+      category: 'Design',
+      courses: [
+        { id: 3, title: 'UI/UX Basics', image: 'ui_ux_basics.jpg', rating: 4.2, dateAdded: '2023-03-10' },
+        { id: 4, title: 'Responsive Web Design', image: 'responsive_design.jpg', rating: 4.7, dateAdded: '2023-04-05' },
+      ],
+    },
+  ];
+
+  const getTopRatedCourses = (courseData) => {
+    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
+    return allCourses.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  };
+
+  const getNewAddedCourses = (courseData) => {
+    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
+    return allCourses.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)).slice(0, 3);
+  };
+
+  const getHighRatedCourses = (courseData) => {
+    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
+    return allCourses.sort((a, b) => b.rating - a.rating).slice(0, 3);
+
+    
+  };
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const handleCategoryChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedCategory(selectedValue);
+    setSelectedCourse(null); // Reset selected course when changing category
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="sidebar">
+        <h1 style={{textAlign:'center',fontFamily:'initial',fontSize:'50px',backgroundColor:'GrayText'}}>Course </h1>
+        <h2 style={{textAlign:'center', fontSize:'50px'}}>Choose a category to find your course</h2>
+        <p style={{textAlign:'center', fontSize:'30px'}}>100+ Live online courses chosen by 50000+ working professionals</p>
+        {/* <form>
+          <select value={selectedCategory} onChange={handleCategoryChange}>
+            <option value="All">All</option>
+            {courseData.map((category) => (
+              <option key={category.category} value={category.category}>
+                {category.category}
+              </option>
+            ))}
+          </select>
+        </form> */}
+      </div>
+      
+      {selectedCourse && (
+        <div className="content" style={styles.content}>
+          <h2>Selected Course</h2>
+          <p>Title: {selectedCourse.title}</p>
+          <p>Rating: {selectedCourse.rating}</p>
+          <p>Date Added: {selectedCourse.dateAdded}</p>
+        </div>
+      )}
+      <TopRatedCourses courses={getTopRatedCourses(courseData)} />
+      <NewAddedCourses courses={getNewAddedCourses(courseData)} />
+      <HighRatedCourses courses={getHighRatedCourses(courseData)} />
     </div>
   );
-}
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    position: 'relative',
+    left: '231px',
+  },
+  slider: {
+    width: '50px',
+    backgroundColor: '#333',
+    color: '#fff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    position: 'absolute',
+    left: '0',
+    top: '10px',
+  },
+  content: {
+    flex: 1,
+    marginLeft: '50px',
+  },
+};
 
 export default App;
