@@ -7,7 +7,7 @@ import logo from './logo.svg';
 const HighRatedCourses = ({ courses }) => {
   return (
     <div style={styles.highRatedCourses}>
-      <h1>Cloud Computing Courses</h1>
+      <h1></h1>
       <ul style={styles.courseList}>
         {courses.map((course) => (
           <li key={course.id} style={styles.courseItem}>
