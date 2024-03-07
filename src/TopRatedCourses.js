@@ -1,20 +1,21 @@
 // src/TopRatedCourses.js
 // TopRatedCourses.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 
 const TopRatedCourses = ({ courses }) => {
+
   return (
     <div style={styles.topRatedCourses}>
       <h1 style={styles.heading}></h1>
       <ul style={styles.courseList}>
         {courses.map((course) => (
-          <li key={course.id} style={styles.courseItem}>
-            <img src={logo} alt={course.title} style={styles.courseImage} />
+          <li key={course?.id} style={styles.courseItem}>
+            <img src={logo} alt={course?.title} style={styles.courseImage} />
             <div style={styles.courseDetails}>
-              <h3 style={styles.courseTitle}>{course.title}</h3>
-              <p style={styles.courseRating}>Rating: {course.rating}</p>
-              <button style={styles.viewDetailsButton} onClick={() => alert(`View details for ${course.title}`)}>
+              <h3 style={styles.courseTitle}>{course?.title}</h3>
+              <p style={styles.courseRating}>Rating: {course?.rating}</p>
+              <button style={styles.viewDetailsButton} onClick={() => alert(`View details for ${course?.title}`)}>
                 View course Details
               </button>
             </div>

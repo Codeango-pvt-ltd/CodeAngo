@@ -2,50 +2,38 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import TopRatedCourses from './TopRatedCourses';
 import NewAddedCourses from './NewAddedCourses';
 import HighRatedCourses from './HighRatedCourses';
+import useFetch from './Components/function/useFetch';
 
 
 const App = () => {
-  const courseData = [
-    {
-      category: 'Programming',
-      courses: [
-        { id: 1, title: 'Introduction to React', image: 'logo.svg', rating: 4.5, dateAdded: '2023-01-01' },
-        { id: 2, title: 'Advanced JavaScript', image: 'advanced_js.jpg', rating: 4.8, dateAdded: '2023-02-15' },
-      ],
-    },
-    {
-      category: 'Design',
-      courses: [
-        { id: 3, title: 'UI/UX Basics', image: 'ui_ux_basics.jpg', rating: 4.2, dateAdded: '2023-03-10' },
-        { id: 4, title: 'Responsive Web Design', image: 'responsive_design.jpg', rating: 4.7, dateAdded: '2023-04-05' },
-      ],
-    },
-  ];
+  const {data} = useFetch({url : 'http://localhost:3000/course'})
+  const [courseData, setcourseData] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  
+  useEffect(()=>{
+      data?.data&&setcourseData([...data.data]);
+  },[data])
+
 
   const getTopRatedCourses = (courseData) => {
-    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
-    return allCourses.sort((a, b) => b.rating - a.rating).slice(0, 3);
+    const allCourses = courseData?.sort((a, b) => b.rating - a.rating);
+    return allCourses;
   };
 
   const getNewAddedCourses = (courseData) => {
-    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
-    return allCourses.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)).slice(0, 3);
+    return courseData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
   };
 
   const getHighRatedCourses = (courseData) => {
-    const allCourses = courseData.reduce((acc, category) => acc.concat(category.courses), []);
-    return allCourses.sort((a, b) => b.rating - a.rating).slice(0, 3);
-
-    
+    return courseData.sort((a, b) => b.rating - a.rating);
   };
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedCourse, setSelectedCourse] = useState(null);
 
   const handleCategoryChange = (event) => {
     const selectedValue = event.target.value;
@@ -123,9 +111,7 @@ const App = () => {
         </form> */}
 
       </div>
-      
 
-      
       {selectedCourse && (
         <div className="content" style={styles.content}>
           <h2>Selected Course</h2>
@@ -134,9 +120,9 @@ const App = () => {
           <p>Date Added: {selectedCourse.dateAdded}</p>
         </div>
       )}
-      <TopRatedCourses courses={getTopRatedCourses(courseData)} />
-      <NewAddedCourses courses={getNewAddedCourses(courseData)} />
-      <HighRatedCourses courses={getHighRatedCourses(courseData)} />
+      {courseData&&(<TopRatedCourses courses={getTopRatedCourses(courseData)} />)}
+      {courseData&&(<NewAddedCourses courses={getNewAddedCourses(courseData)} />)}
+      {courseData&&(<HighRatedCourses courses={getHighRatedCourses(courseData)} />)}
     </div>
     
     
