@@ -11,14 +11,12 @@ const NewAddedCourses = ({ courses }) => {
       <ul style={styles.courseList}>
         {courses.map((course) => (
           <li key={course.id} style={styles.courseItem}>
-            <img src={logo} alt={course.title} style={styles.courseImage} />
+            <img src={course?.image?.dataUrl} alt={course.title} style={styles.courseImage} />
             <div style={styles.courseDetails}>
               <h3 style={styles.courseTitle}>{course.title}</h3>
               <p style={styles.courseRating}>Rating: {course.rating}</p>
               <button style={styles.viewDetailsButton} onClick={() => alert(`View details for ${course.title}`)}>
               View course Details
-
-
               </button>
             </div>
           </li>
