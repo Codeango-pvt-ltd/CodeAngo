@@ -2,27 +2,29 @@ import React from "react";
 import logo from "../logo.jpg";
 import search from "../search.jpg";
 export default function Navbar() {
+
   return (
     <div className="navbar">
-      <div className="logo">
-        <img src={logo} alt="logo" />
+      <div className="logo" >
+        <img src={logo}  alt="logo" />
       </div>
-      <span className="bubblebluesmall2"></span>
+      <span className="bubblebluesmall2" ></span>
       <div className="search">
-        <input type="text" placeholder="Search for anything here"></input>
+        <input type="text" placeholder="Search for anything here"/>
         <img src={search} alt="search" />
+        
       </div>
-      <div>
+      <div className ="loginSection">
         <hr className="hr"></hr>
         <a href="/">
           {" "}
           <div className="login"> Log in</div>
         </a>
-        <hr className="loginhr"></hr>
+        {/* <hr className="loginhr"></hr> */}
         <a href="/">
           {" "}
           <div className="signup">
-            <button> Sign Up</button>
+            <button className="reg"> Sign Up</button>
           </div>{" "}
         </a>
       </div>
@@ -31,6 +33,7 @@ export default function Navbar() {
       <span className="bubblesorangebig"></span>
       <span className="bubblebluesmall"></span>
       <span className="bubbleorangesmall"></span>
+      <span className="bubbleorangebg3"></span>
     </div>
   );
 }

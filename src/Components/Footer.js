@@ -13,6 +13,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer">
+        <hr className="footerhr"></hr>
         <div className="contactsection">Contact</div>
         <div className="mail">
           <img src={mail} alt="mail" />
@@ -88,9 +89,10 @@ export default function Footer() {
         <a className="rightlinks" href="/">Login</a><br/>
         </div>
         </div>
-      </div>
+      
       <hr className="footerbottom"></hr>
       <div className="copyright">© 2023 Codeango Pvt. Ltd.. All rights reserved.</div>
+      </div>
     </footer>
   );
 }
