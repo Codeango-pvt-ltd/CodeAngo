@@ -6,33 +6,33 @@ import logo from './logo.svg';
 
 const NewAddedCourses = ({ courses }) => {
   return (
-    <div className='container_newlyadded'>
-        <span className='smallorangenewadded'></span>
-        <span className='smallbluenewadded'></span>
-      <h2 className='newAddedCourses'>Newly Added Courses</h2>
-      <ul className='courseList'>
+    <div style={styles.newAddedCourses}>
+      <h1 style={styles.heading}></h1>
+      <ul style={styles.courseList}>
         {courses.map((course) => (
-          <li key={course.id} className='courseItem'>
-            <img src={logo} alt={course.title} className='courceImage' />
+          <li key={course.id} style={styles.courseItem}>
+            <img src={course?.image?.dataUrl} alt={course.title} style={styles.courseImage} />
             <div style={styles.courseDetails}>
-              <h3 className="courseTitle">{course.title}</h3>
-              <p className='courseRating'>Rating: {course.rating}</p>
-              <button className='viewdetailsbutton' onClick={() => alert(`View details for ${course.title}`)}>
-                View Details
+              <h3 style={styles.courseTitle}>{course.title}</h3>
+              <p style={styles.courseRating}>Rating: {course.rating}</p>
+              <button style={styles.viewDetailsButton} onClick={() => alert(`View details for ${course.title}`)}>
+              View course Details
               </button>
             </div>
           </li>
         ))}
-        <span className='bluebignewadded'></span>
-        <span className='orangebignewadded'></span>
-        <span className='smallblue2newadded'></span>
       </ul>
     </div>
   );
 };
 
 const styles = {
-
+  newAddedCourses: {
+    marginBottom: '30px',
+  },
+  heading: {
+    color: '#333',
+  },
   courseList: {
     listStyle: 'none',
     padding: '0',
@@ -40,15 +40,37 @@ const styles = {
     flexWrap: 'wrap',
     gap: '20px',
   },
-
+  courseItem: {
+    backgroundColor: '#fff',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    overflow: 'hidden',
+    transition: 'transform 0.3s ease-in-out',
+    width: 'calc(33.33% - 20px)',
+    marginBottom: '20px',
+    cursor: 'pointer',
+  },
   courseItemHover: {
     transform: 'scale(1.05)',
   },
-  
+  courseImage: {
+    objectFit: 'cover',
+    borderRadius: '10px 10px 0 0',
+    top: '1024px',
+    left: '374px',
+  },
   courseDetails: {
     padding: '15px',
   },
- 
+  courseTitle: {
+    margin: '0',
+    color: '#333',
+  },
+  courseRating: {
+    margin: '0',
+    color: '#777',
+    color: 'orange',
+  },
   viewDetailsButton: {
     backgroundColor: '#007BFF',
     color: '#fff',

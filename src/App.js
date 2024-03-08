@@ -6,6 +6,7 @@ import Reviews from './Components/Reviews';
 import Hero from './Components/Hero';
 import GetInTouch from './Components/Get_in_touch';
 import CourseMain from './Components/courseComponent/CourseMain'
+import Courses from './Components/courseComponent/Courses';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
     <Hero/>
   
    <Features/>
-   <CourseMain/>
+   {/* <CourseMain/> */}
+   <Courses />
    <Reviews/>
    <GetInTouch/>
    <Footer/>
