@@ -1,4 +1,5 @@
 import React from 'react'
+// import Courses from '../Components/courseComponent/Courses';
 
 export default function Cources() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -10,8 +11,10 @@ export default function Cources() {
     // You can perform additional actions like making an API call or updating state based on the searchQuery
   };
   return (
+   
     <div>
         <div>
+          {/* <Courses/> */}
       <input
         type="text"
         placeholder="Enter your search query"
@@ -30,5 +33,6 @@ export default function Cources() {
                 All courses
               </button>
     </div>
+    
   )
 }

@@ -7,10 +7,12 @@ import Hero from './Components/Hero';
 import GetInTouch from './Components/Get_in_touch';
 import CourseMain from './Components/courseComponent/CourseMain'
 
+
 function App() {
 
   return (
     <>
+    
         <Navbar/>
     <Hero/>
   
