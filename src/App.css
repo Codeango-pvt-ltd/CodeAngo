@@ -1,38 +1,209 @@
-.App {
+/* App.css */
+
+/* Additional CSS for CSS3 enhancements and Android compatibility */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  margin: 0;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* About component styles */
+.section {
+  margin-bottom: 50px;
+}
+
+/* Team styles */
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+/* Box styles */
+.box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.box:hover {
+  background-color: #f0f0f0;
+}
+
+/* Button styles */
+#subscribeBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 200px;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+#subscribeBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Keyframe animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Additional styles */
+.alert {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.alert h1 {
+  text-align: center;
+}
+
+.alert .box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.alert .box h1 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.alert .box h1,
+.alert .box h2 {
+  color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .team-member img {
+    width: 150px;
+    height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Footer shadow effect */
+footer {
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional CSS for button centering and styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#subscribeBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+#subscribeBtn:hover {
+  background-color: orangered;
+}
+
+/* CSS3 enhancements */
+/* Example: Add CSS3 box shadow to the button */
+#subscribeBtn {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Android-specific styles */
+/* Example: Adjust font size for better readability on Android devices */
+@media only screen and (max-width: 768px) and (min-device-width: 320px) and (max-device-width: 1024px) {
+  body {
+    font-size: 16px;
   }
 }
